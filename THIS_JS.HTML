@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkpoint 8</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="titulo">
+            <h1>CHECKPOINT 7</h1>
+        </div>
+
+        <nav>
+            <div>
+                <a href="index.html">¿Qué tipo de bucles hay en JS?</a>
+            </div>
+            <div>
+                <a href="DATOSJS.html">¿Cuáles son las diferencias entre const, let y var?</a>
+            </div>
+            <div>
+                <a href="FUNCION.html">¿Qué es una función de flecha?</a>
+            </div>
+            <div>
+                <a href="condicional.html">¿Qué es la deconstrucción de variables?</a>
+            </div>
+            <div>
+                <a href="operador_ternario.html">¿Qué hace el operador de extensión en JS?</a>
+            </div>
+            <div>
+                <a href="DECLARACION-EXPRESION.HTML">¿Qué es la programación orientada a objetos?</a>
+            </div>
+            <div>
+                <a href="THIS_JS.HTML">¿Qué es una promesa en JS?</a>
+            </div>
+            <div>
+                <a href="asyn.html">¿Qué hacen async y await por nosotros?</a>
+            </div>
+        </nav>
+
+
+    </header>
+
+    <div class="contenedor">
+
+        <div class="column_img">
+
+            <div>
+                <img src="javascript 3.webp"foto">
+                <br>
+                <img src="javascript 4.jpeg" alt="foto">
+                <br>
+                <img src="JavaScript 7.jpg" alt="foto">
+                <br>
+                <img src="javascript 5.jpeg" alt="foto">
+                <br>
+                <img src="javascript 2.jpg" alt="foto">
+                <br>
+                <img src="JavaScript 7.jpg" alt="foto">
+                <br>
+                <img src="JavaScript 9.jpg" alt="foto">
+                <br>
+                <img src="javascript 5.jpeg" alt="foto">
+                <br>
+                <img src="javascript 10.jpeg" alt="foto">
+                <br>
+                <img src="javascript 3.webp" alt="foto">
+                <br>
+                <img src="javascript 4.jpeg" alt="foto">
+                <br>
+            </div>
+
+        </div>
+
+        <div class="column_list">
+
+            <ul>
+
+                <li><b>¿Qué es la palabra clave "this" en JS?</b>
+                        <p>La palabra clave "this" en JavaScript se refiere al objeto al que pertenece el contexto de ejecución actual. Su valor depende de cómo se llama la función y de dónde se encuentra la invocación de la función.</P>
+                        <br>
+                        <p>Imagina que "this" es como un puntero que señala a algo en el mundo de JavaScript. Pero lo interesante es que a qué apunta ese puntero puede cambiar dependiendo de cómo se llama una función y desde dónde se llama.</p>
+                </li><br>
+
+                <li><b>EN UNA FUNCION NORMAL</b>
+                <p> Cuando usas "this" dentro de una función normal, generalmente apunta al objeto global, que es como el entorno principal donde se ejecuta tu código.</P>
+                <br><p><b>EJEMPLO</b></p>
+                <br><img src="THISNORJS.png" alt=""><br>
+                <P>En este ejemplo, definimos una función llamada saludar.</p><br>
+                <p>Dentro de la función, usamos console.log para imprimir un mensaje que incluye la palabra clave this.</p>
+                <br><p>Cuando llamamos a la función saludar por sí sola (saludar()), this hace referencia al objeto global en el navegador, que es Window. </p>
+                <br><p>Por lo tanto, el mensaje impreso será "Hola, soy Window".</P>
+                </li>
+
+                <li><b>EN UN METODO DE UN OBJETO</b>
+                <p> Si usas "this" dentro de un método de un objeto, apuntará al propio objeto al que pertenece ese método. Es como si "this" estuviera apuntando hacia el objeto que lo contiene.</P>
+                <br><p><b>EJEMPLO</b></p>
+                <br><img src="THISMETJS.png" alt=""><br>
+                <P>Creamos un objeto llamado persona con una propiedad nombre y un método saludar</p><br>
+                <p>Dentro del método saludar, usamos this.nombre para acceder al valor de la propiedad nombre del objeto actual.</p>
+                <br><p>Cuando llamamos al método saludar del objeto persona (persona.saludar()), this hace referencia al propio objeto persona. </p>
+                <br><p>Por lo tanto, el mensaje impreso será "Hola, soy Juan".</P>
+                </li>
+                <li><b>EN UNA FUNCION FLECHA</b>
+                <p>En las funciones flecha, "this" funciona de manera diferente. En lugar de apuntar al objeto que lo rodea, "this" en una función flecha toma el valor de "this" en el contexto en el que se definió la función flecha. Es como si "this" mirara hacia arriba y usara el valor de "this" del lugar donde se creó la función flecha.</P>
+                <br><p><b>EJEMPLO</b></p>
+                <br><img src="THISFLEJS.png" alt=""><br>
+                <P>Creamos un objeto llamado objeto con una propiedad valor y un método obtenerValor.</p><br>
+                <p>Dentro del método obtenerValor, definimos una función flecha llamada funcionFlecha.</p>
+                <br><p>Dentro de funcionFlecha, usamos this.valor para acceder al valor de la propiedad valor del objeto actual.</p>
+                <br><p>Aunque la función flecha está dentro de un método de un objeto, this dentro de la función flecha hace referencia al contexto léxico donde se definió la función (obtenerValor), no al objeto objeto.</P>
+                <br><p>Por lo tanto, cuando llamamos al método obtenerValor (objeto.obtenerValor()), el mensaje impreso será "El valor es 42".</p>
+                </li>
+                <li><b>TENER EN CUENTA</b>
+                <p>"this" en JavaScript puede comportarse de manera diferente dependiendo de dónde se utilice, ya sea en una función normal, un método de un objeto o una función flecha. Es importante entender cómo se resuelve "this" en cada contexto para evitar confusiones al acceder a las propiedades y métodos de los objetos.</P>
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
