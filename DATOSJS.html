@@ -81,50 +81,69 @@
 
             <ul>
 
-                <li><b>TIPOS DE DATOS EN JAVASCRIPT</b>
-                        <p>En programación se refieren a las diferentes categorías o clases de valores que pueden ser almacenados y manipulados en un programa. Cada tipo de dato tiene sus propias características y define qué tipo de información puede representar y cómo se puede manipular.</p><br>
-                        <P>Entre los mas comunes tenemos:</P>
+                <li><b>PRIMERO DEFINIREMOS CONST, LET Y VAR</b>
+                        <p>Let, const y var son palabras clave que se utilizan para declarar variables en JavaScript, pero tienen diferencias importantes en cuanto a su alcance y mutabilidad. Aquí tienes una explicación de cada uno:</p><br>
                 </li><br>
+                <li><b>CONST</b>
+                        <p>const es una palabra clave en JavaScript que se utiliza para declarar variables cuyos valores no cambiarán a lo largo del programa. Es como decirle a JavaScript: "¡Hey, este valor es constante, no lo cambies por nada en el mundo!". Cuando declaras una variable con const, estás indicando que su valor permanecerá igual después de haber sido asignado.</p><br>
 
-                <li><b>NUMEROS</b>
-                        <p>Representan valores numéricos, ya sean enteros o de punto flotante.</p>
+                        <p>Imagina que tienes una caja y decides poner algo dentro. Con const, una vez que colocas algo dentro de la caja, ese algo no puede ser cambiado por otra cosa. Por ejemplo, si pones una manzana dentro de la caja, no puedes sacar la manzana y poner una pera en su lugar. La manzana permanece allí para siempre.</p><br>
                         <p>Por ejemplo:</p><br>
-                        <img src="NUMEROSJS.png" alt="numeros en js">
+                        <img src="constejemplo.png" alt="numeros en js">
+                        <p>En este ejemplo, edad es una constante que tiene el valor de 30. No importa cuánto pase el tiempo o cuánto intentes cambiarlo, edad siempre será 30.</p><br>
+                        <p>Sin embargo, es importante destacar que const no impide que el valor almacenado sea mutable. Por ejemplo, si edad es un objeto o un arreglo, puedes cambiar sus propiedades o elementos, pero no puedes asignarle una nueva referencia.</p><br>
+                        <p><b>POR EJEMPLO:</b></p><br>
+                        <img src="const ejemplo2.png" alt=""><br>
+                        <p>Por lo que podemos decir entonces que const se utiliza para declarar variables cuyos valores no cambiarán a lo largo del programa. Es una buena práctica utilizar const siempre que sea posible, ya que ayuda a prevenir errores y a hacer tu código más claro y legible</p>
                     </li><br>
 
-                <li><b>CADENA DE TEXTO (STRING)</b>
-                        <p>Son secuencias de caracteres, como letras, números y símbolos, encerradas entre comillas simples o dobles</p>
+                <li><b>LET</b>
+                        <p>let es otra palabra clave en JavaScript que se utiliza para declarar variables, pero con una diferencia importante con respecto a const. Mientras que const se utiliza para valores que no cambiarán a lo largo del programa, let se utiliza para variables cuyos valores pueden cambiar. </p><br>
+
+                        <p>Imagina que tienes una caja y decides poner algo dentro. Con let, puedes cambiar lo que está dentro de la caja en cualquier momento. Por ejemplo, si inicialmente pones una manzana dentro de la caja, más tarde puedes sacar la manzana y poner una pera en su lugar. El contenido de la caja puede cambiar según lo necesites.</p><br>
                         <p>Por ejemplo:</p><br>
-                        <img src="textojs.png" alt="numeros en js">
+                        <img src="letejemmplo.png" alt="numeros en js"><br>
+                        <p>En este ejemplo, contador es una variable que puede cambiar su valor a medida que el programa se ejecuta. Inicialmente se establece en 0, pero más tarde puedes incrementarlo, decrementarlo o asignarle cualquier otro valor según lo requiera tu programa.</p><br>
+                        <p>Un ejemplo de cambio de valor:</p><br>
+                        <img src="letejemplo2.png" alt=""><br>
                 </li><br>
 
-                <li><b>BOOLEANOS (BOOLEANS)</b>
-                        <p>Representan un valor verdadero (true) o falso (false). Se utilizan en operaciones lógicas y de comparación</p>
+                <li><b>VAR</b>
+                        <p>var es una palabra clave que se utiliza para declarar variables en JavaScript, al igual que let y const. Sin embargo, var tiene algunas diferencias importantes en comparación con let y const.</p><br>
+                        <p>Imagina var como una caja donde puedes guardar cosas. Puedes poner cosas diferentes dentro de la caja en diferentes momentos, y puedes cambiar lo que está dentro de la caja en cualquier momento. Por ejemplo, puedes poner una manzana en la caja y más tarde cambiarla por una pera. La flexibilidad de var permite que el valor de la variable cambie a lo largo del programa.</p><br>
                         <p>Por ejemplo:</p><br>
-                        <img src="booleanojs.png" alt="numeros en js">
+                        <img src="varejemplo1.png" alt="numeros en js"><br>
+                        <p>En este ejemplo, contador es una variable declarada con var, lo que significa que su valor puede cambiar a medida que el programa se ejecuta. Puedes incrementar contador, decrementarlo o asignarle cualquier otro valor según lo requiera tu programa.</p><br>
+                        <p>otro ejemplo seria:</p><br>
+                        <img src="varejemplo2.png" alt=""><br>
+                        <p>Una diferencia importante entre var y let es que var tiene un alcance de función, lo que significa que la variable declarada con var existe en toda la función en la que se declara. Esto puede llevar a problemas de alcance (scope) si no se maneja correctamente.</p><br>
+                        <p>Por ejemplo:</p><br>
+                        <img src="varejemplo3.png" alt=""><br>
                 </li><br>
-                <li><b>ARREGLOS (ARRAYS)</b>
-                    <p>Son colecciones ordenadas de elementos que pueden ser de cualquier tipo de datos. Se declaran con corchetes [] y pueden contener cero o más elementos separados por comas</p>
-                    <p>Por ejemplo:</p><br>
-                    <img src="arrayjs.png" alt="numeros en js">
-                </li><br>
-                <li><b>OBJETOS (OBJECTS)</b>
-                    <p>Son colecciones de pares clave-valor, donde cada clave es una cadena de texto que identifica un valor asociado. Se declaran con llaves {} y los pares clave-valor se separan por comas</p>
-                    <p>Por ejemplo:</p><br>
-                    <img src="objetojs.png" alt="numeros en js">
-                </li><br>
-                <li><b>NULOS E INDEFINIDOS (NULL & UNDEFINED)</b>
-                    <p>Representan la ausencia de valor. null se utiliza para indicar explícitamente la ausencia de un valor, mientras que undefined se utiliza cuando una variable ha sido declarada pero aún no ha sido asignada ningún valor.</p>
-                    <p>Por ejemplo:</p><br>
-                    <img src="nulljs.png" alt="numeros en js">
-                </li><br>
-                <li><b>FUNCIONES (FUNCTIONS)</b>
-                    <p>Son bloques de código reutilizables que realizan una tarea específica. En JavaScript, las funciones son tratadas como objetos de primera clase y pueden ser asignadas a variables, pasadas como argumentos y devueltas como valores de otras funciones.</p>
-                    <p>Por ejemplo:</p><br>
-                    <img src="funcionjs.png" alt="numeros en js">
-                </li><br>
-
-
+                <li><b>DIFERENCIAS RELEVANTES</b><br>
+                    <p>Aun cuando en cada definicion se hablo de las diferencias de una con otras, enumeraremos en forma resumida las diferencias:</p><br>
+                    <p><b>Alcance (Scope):</b>const y let tienen alcance de bloque (block scope), lo que significa que solo están disponibles dentro del bloque donde se declaran. <br>var tiene alcance de función (function scope), lo que significa que está disponible dentro de la función donde se declara o en el ámbito global si no está dentro de una función.</p><br>
+                    <p><b>Reasignación de valor:</b>Con const, no puedes reasignar el valor de la variable después de inicializarla. Sin embargo, para objetos y matrices, el contenido puede ser modificado. <br> Con let, puedes reasignar el valor de la variable en el mismo ámbito. <br>Con var, puedes reasignar el valor de la variable en cualquier lugar de la función o el ámbito global.</p><br>
+                    <p><b>Izado (Hoisting):</b>Tanto var como let son izadas (hoisted) al principio de su ámbito, pero var es inicializada con undefined, mientras que let no está inicializada hasta que alcanza la línea donde se declara. <br>
+                    const también es izada, pero no puedes acceder a ella antes de su declaración.</p><br>
+                    <p><b>Temporalidad de TDZ (Temporal Dead Zone):</b>
+                    Con const y let, hay una zona temporal muerta (Temporal Dead Zone) desde el inicio del bloque hasta la declaración de la variable. No puedes acceder a la variable en este período. <br>
+                    Con var, no hay TDZ, por lo que puedes acceder a la variable antes de su declaración, pero su valor será undefined.</p><br>
+                    <p><b>Redeclaración:</b>
+                    No puedes redeclarar una variable con el mismo nombre en el mismo ámbito con let y const, lo que puede ayudar a evitar errores. <br>
+                    Con var, puedes redeclarar una variable sin recibir un error, lo que puede causar confusión y errores en el código.</p><br>
+                    <p><b>Compatibilidad con ECMAScript 6:</b>
+                    let y const fueron introducidos en ECMAScript 6 (ES6), por lo que pueden no ser compatibles con versiones anteriores de JavaScript en algunos navegadores. <br>
+                    var es compatible con versiones anteriores y está ampliamente soportado en todos los navegadores.</p><br>
+                    </li>
+                    <li><b>Para mas informacion consullta:</b>
+                    <p>Mozilla Developer Network (MDN) - let:
+                    https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/let </p><br>
+                    <p>W3Schools - var:
+                    https://www.w3schools.com/js/js_let.asp</p><br>
+                    <p>JavaScript.info - const:
+                    https://javascript.info/let</p><br>
+                    </li>
             </ul>
         </div>
 

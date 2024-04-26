@@ -52,3 +52,48 @@ const colores = ['rojo', 'verde', 'azul'];
 for (let color of colores) {
   console.log(color);
 }
+
+
+
+const edad = 30;
+
+
+const persona = {
+  nombre: 'Juan',
+  edad: 30
+};
+
+persona.edad = 31; // Esto está bien
+
+persona = {}; // Esto generará un error
+
+
+
+let contador = 0;
+
+let nombre = 'Juan';
+nombre = 'María'; // Cambiando el valor de la variable
+
+let edad;
+edad = 30; // Asignando un valor después de la declaración
+
+
+
+
+var contador = 0;
+
+
+var nombre = 'Juan';
+nombre = 'María'; // Cambiando el valor de la variable
+
+var edad;
+edad = 30; // Asignando un valor después de la declaración
+
+function ejemplo() {
+  var x = 10;
+  if (true) {
+      var x = 20; // La variable x se sobrescribe
+      console.log(x); // Imprimirá 20
+  }
+  console.log(x); // Imprimirá 20
+}
