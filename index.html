@@ -62,7 +62,7 @@
 
             <ul>
                 <li><b>BUCLES EJ JS</b>
-                        <p>Un bucle, en programación, es una estructura que permite ejecutar un bloque de código repetidamente hasta que se cumpla una condición específica. Los bucles son fundamentales en la programación porque permiten automatizar tareas que requieren repetición.</p>
+                    <p>Un bucle, en programación, es una estructura que permite ejecutar un bloque de código repetidamente hasta que se cumpla una condición específica. Los bucles son fundamentales en la programación porque permiten automatizar tareas que requieren repetición.</p>
                 </li><br>
 
                 <li><b>EN JAVASCRIPT</b>
@@ -89,11 +89,86 @@
                     <br>
                     <p>El bucle while es una estructura de control que se utiliza para repetir un bloque de código mientras una condición específica sea verdadera. Esto significa que el bloque de código se ejecutará repetidamente mientras la condición sea evaluada como verdadera. Una vez que la condición se evalúa como falsa, la ejecución del bucle se detiene y el programa continúa con la siguiente instrucción después del bucle.</p>
                     <br>    
-                        <li><b>SINTAXIS</b>
+                        <p><b>SINTAXIS</b></p>
                             <br>
-                            <p>IMAGEN</p>
+                            <img src="while-sintaxiy.png" alt="">
+                            <br>
                             <br>  
-                        </li>
+                        <p>La palabra clave while indica el inicio del bucle.</P> 
+                        <br>
+                        <p>La condición es una expresión booleana que se evalúa antes de cada iteración del bucle. Si la condición es verdadera, el bloque de código dentro del bucle se ejecuta. Si la condición es falsa, el bucle se detiene y la ejecución continúa con el código después del bucle.</p>
+                        <br>
+                        <p>El bloque de código entre llaves {} es el cuerpo del bucle, que contiene las instrucciones que se ejecutan repetidamente mientras la condición sea verdadera.</p>
+                        <p>El bucle while en JavaScript es como un reloj que sigue funcionando mientras cierta condición sea verdadera. Imagina que estás esperando el autobús: mientras no llegue, sigues esperando. Pero una vez que llega, dejas de esperar y te subes al autobús. El bucle while funciona de manera similar.</p>
+                </li>
+                <br>
+                <li><b> EJEMPLO DE WHILE</b><br>
+                    <img src="WHILE EJEMPLO.png" alt="">
+                    <br>
+                    <br>
+                    <p><b>En este ejemplo::</b></p>
+                    <p><b>Establecer la condición:</b> Antes de comenzar el bucle, debes decirle a JavaScript cuándo debe parar de ejecutarlo. Esto se hace estableciendo una condición entre paréntesis después de la palabra clave while. Por ejemplo, contador <= 5 es una condición que significa "continuar ejecutando el bucle mientras el contador sea igual o menor que 5". </p>
+                    <br>
+                    <p> <b>El cuerpo del bucle:</b> Dentro de las llaves {}, escribes las instrucciones que deseas que se repitan. Esto puede ser cualquier cosa: imprimir mensajes, realizar cálculos, etc. Estas instrucciones se ejecutarán una y otra vez mientras la condición siga siendo verdadera.</p>
+                    <br>
+                    <p> <b>Actualización de la condición:</b> Es importante asegurarse de que la condición eventualmente cambie para evitar que el bucle se ejecute infinitamente. Esto se hace típicamente dentro del cuerpo del bucle. En nuestro ejemplo, usamos contador++ para incrementar el contador en 1 en cada iteración.</p>
+                    <br>
+                    <p><b>Salir del bucle:</b> Una vez que la condición se evalúa como falsa, el bucle se detiene y la ejecución del programa continúa con la primera línea de código después del bucle while.</p><br>
+                    <br>
+                    <p><b>El bucle while es una herramienta poderosa para ejecutar código repetitivo basado en una condición específica. Sin embargo, debes tener cuidado de asegurarte de que la condición se vuelva falsa en algún momento para evitar que el bucle se ejecute para siempre.</b><br>De esto hablaremos mas adelante</p>
+                </li>
+                <li><b>DO WHIILE</b><br>
+                    <p>El bucle do-while es una estructura de control iterativa que ejecuta un bloque de código al menos una vez y luego repite la ejecución del bloque mientras se cumpla una condición específica.</p>
+                    <br>
+                    <p><b>SINTAXIS</b></p>
+                    <img src="DOWHILE SINTAX.png" alt="">
+                    <br>
+                    <p><b>DONDE:</b></p>
+                    <p><b>Evaluación inicial: </b>El bloque de código dentro del bucle se ejecuta primero, sin importar la condición.</p><br>
+                    <p><b>Evaluación de la condición:</b> Después de ejecutar el bloque de código, se evalúa la condición especificada en el while.</p><br>
+                    <p><b>Repetición del bucle:</b> Si la condición es verdadera, el bloque de código se ejecuta nuevamente. Este proceso se repite hasta que la condición sea falsa.</p><br>
+                    <p><b>Salida del bucle:</b> El bucle do-while termina cuando la condición especificada se evalúa como falsa.</p><br>
+                    <p>El bucle do-while es útil cuando necesitas ejecutar un bloque de código al menos una vez, independientemente de si la condición es verdadera o falsa al principio. Por ejemplo, puede ser útil para solicitar al usuario que ingrese datos al menos una vez, y luego continuar solicitando datos mientras se cumpla una condición específica.</p><br>
+                    <p><b>EJEMPLO DE BUCLE DO WHILE</b></p><br>
+                    <img src="do while ejemplo.png" alt="">
+                    <p>Ahora vamos a explicarlo</p><br>
+                    <p>Imagina que estás creando un programa que necesita que el usuario ingrese un número mayor que 10. Para garantizar que el programa funcione correctamente, decides utilizar un bucle do-while.</p><br>
+
+                    <p><b>Inicio del proceso:</b> El programa comienza solicitando al usuario que ingrese un número a través de un cuadro de diálogo o una entrada en la consola.</p><br>
+                    <p><b>Verificación inicial: </b>Una vez que el usuario ha ingresado un número, el programa evalúa si este número es mayor que 10.</p><br>
+                    <p><b>Repetición del proceso si es necesario:</b> Si el número ingresado no cumple con la condición de ser mayor que 10, el programa solicita al usuario que ingrese otro número. Este proceso se repite hasta que el usuario finalmente ingrese un número que cumpla con la condición establecida.</p><br>
+                    <p><b>Finalización del proceso: </b>Una vez que el usuario ha ingresado un número válido (es decir, mayor que 10), el programa continúa con el resto de las instrucciones que están después del bucle do-while.</p><br>
+
+                    <p>En resumen, el bucle do-while garantiza que el programa solicite al usuario que ingrese un número al menos una vez, y luego continúe solicitando números mientras el número ingresado no cumpla con los criterios establecidos. Esto ayuda a asegurar que el programa funcione correctamente y que el usuario proporcione la información necesaria para continuar con el proceso.</p>
+                    <br>
+                    <p><b>Para hacerlo mas pedagógico</b></p><br>
+                    <p>Imagina que estás jugando a un juego de adivinanzas con un amigo. El bucle do-while es como jugar a este juego hasta que adivines la respuesta correcta.</p><br>
+                    <p><b>Primera ronda de adivinanzas:</b> Comienzas el juego y tu amigo te hace una adivinanza. Tienes que intentar adivinar la respuesta correcta. Esto es como el cuerpo del bucle do-while, que se ejecuta al menos una vez sin importar la condición.</p><br>
+                    <p><b>Intento de adivinar:</b> Haces tu primer intento de adivinar la respuesta. No importa si aciertas o no en este momento, porque el bucle do-while se ejecuta al menos una vez.</p><br>
+                    <p><b>Verificación de respuesta:</b> Después de hacer tu intento, tu amigo verifica si has adivinado correctamente. Si lo has hecho, ¡has ganado el juego y sales del bucle! Pero si no, vuelves a jugar otra ronda.</p><br>
+                    <p><b>Otra ronda de adivinanzas:</b> Como aún no has adivinado correctamente, vuelves a jugar otra ronda. Esto es como volver al inicio del bucle do-while y repetir el proceso.</p><br>
+                    <p><b>Adivina hasta que aciertes:</b> Sigues jugando rondas de adivinanzas hasta que finalmente adivinas la respuesta correcta. Una vez que lo haces, sales del bucle y ganas el juego.</p><br>
+                    <p>En resumen, el bucle do-while es como jugar a un juego de adivinanzas donde tienes que adivinar la respuesta correcta al menos una vez antes de salir del juego. Es una forma útil de asegurarse de que una acción se ejecute al menos una vez, incluso si la condición es falsa desde el principio.</p><br>
+                </li>
+                <li><b>FOR</b>
+                    <p>El bucle for en JavaScript es una estructura de control que te permite repetir un bloque de código un número específico de veces</p><br>
+                    <p><b>SINTAXIS</b></p><br>
+                    <img src="for sintax.png" alt=""><br>
+                    <p><b>DONDE:</b></p>
+                    <p><b>La inicialización</b> se ejecuta una vez antes de que comience el bucle y generalmente se utiliza para inicializar una variable de control.</p><br>
+                    <p><b>La condición</b> se evalúa antes de cada iteración del bucle. Si es verdadera, el bloque de código se ejecuta; de lo contrario, el bucle se detiene.</p><br>
+                    <p><b>La actualización</b> se ejecuta al final de cada iteración del bucle y generalmente se utiliza para actualizar la variable de control.</p><br>
+                    <p><b>EJEMPLO DE FOR</b></p><br>
+                    <img src="for ejemplo.png" alt=""><br>
+                    <p>Este bucle se ejecutará cinco veces, comenzando con i = 1, luego i = 2, y así sucesivamente hasta que i = 5. En cada iteración, se imprimirá el valor de i.p </p><br>
+                    <p>El bucle for es especialmente útil cuando sabemos exactamente cuántas veces queremos repetir una tarea y queremos mantener un control claro sobre la inicialización, la condición y la actualización de las variables involucradas.</p><br>
+                    <p><b>Un poco mas pedagógico:</b></p><br>
+                    <p>Imagina que estás organizando una fiesta de cumpleaños y necesitas invitar a tus amigos. Tienes una lista de amigos en la que cada uno tiene un nombre. Para enviarles una invitación, decides utilizar un bucle for.</p><br>
+                    <p><b>Preparativos iniciales:</b> Antes de comenzar a enviar las invitaciones, necesitas tener la lista de tus amigos lista. Esta lista es como un conjunto de datos que contiene los nombres de tus amigos.</p><br>
+                    <p><b>Recorrido de la lista de amigos:</b> Una vez que tienes la lista de amigos preparada, comienzas a recorrerla uno por uno. El bucle for te permite hacer esto de manera organizada y eficiente.</p><br>
+                    <p><b>Envío de invitaciones:</b> Para cada amigo en la lista, tomas su nombre y le envías una invitación a tu fiesta de cumpleaños. Esto se hace dentro del cuerpo del bucle for.</p><br>
+                    <p><b>Continuación del proceso:</b> Después de enviar todas las invitaciones, el bucle for ha recorrido toda la lista de amigos y ha realizado la acción de enviar una invitación para cada uno.</p><br>
+                    <p>En resumen, el bucle for en JavaScript te permite recorrer una lista de elementos, realizar una acción para cada elemento y continuar con el proceso hasta que se hayan recorrido todos los elementos de la lista. Esto es útil cuando necesitas repetir una tarea varias veces, como enviar invitaciones a una lista de amigos para una fiesta de cumpleaños.</p>
                 </li>
             </ul>
 
