@@ -26,3 +26,29 @@ for (inicialización; condición; actualización) {
 for (let i = 1; i <= 5; i++) {
   console.log(i);
 }
+
+for (variable in objeto) {
+  // Bloque de código a ejecutar
+}
+
+const persona = {
+  nombre: 'Juan',
+  edad: 30,
+  ciudad: 'Madrid'
+};
+
+for (let propiedad in persona) {
+  console.log(propiedad + ': ' + persona[propiedad]);
+}
+
+for (let elemento of iterable) {
+  // Bloque de código a ejecutar por cada elemento
+}
+
+
+
+const colores = ['rojo', 'verde', 'azul'];
+
+for (let color of colores) {
+  console.log(color);
+}
