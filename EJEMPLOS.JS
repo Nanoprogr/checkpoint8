@@ -97,3 +97,86 @@ function ejemplo() {
   }
   console.log(x); // Imprimirá 20
 }
+
+
+
+// Función tradicional
+function suma(a, b) {
+  return a + b;
+}
+
+// Función flecha
+const suma = (a, b) => a + b;
+
+
+// Función tradicional
+const persona = {
+  nombre: 'Juan',
+  saludar: function() {
+    console.log(`Hola, soy ${this.nombre}`);
+  }
+};
+
+
+// Con función flecha
+const persona = {
+  nombre: 'Juan',
+  saludar: () => {
+    console.log(`Hola, soy ${this.nombre}`);
+  }
+};
+
+persona.saludar(); // Imprimirá "Hola, soy undefined"
+
+
+
+// Función tradicional
+const persona = {
+  nombre: 'Juan',
+  saludar: function() {
+    console.log(`Hola, soy ${this.nombre}`);
+  }
+};
+
+
+// Con función flecha
+const persona = {
+  nombre: 'Juan',
+  saludar: () => {
+    console.log(`Hola, soy ${this.nombre}`);
+  }
+};
+
+persona.saludar(); // Imprimirá "Hola, soy undefined"
+
+// Función tradicional
+function esPar(num) {
+  return num % 2 === 0;
+}
+
+// Función flecha
+const esPar = num => num % 2 === 0;
+
+
+// Función tradicional
+function duplicar(num) {
+  return num * 2;
+}
+
+// Función flecha
+const duplicar = num => num * 2;
+
+
+// Función constructora tradicional
+function Persona(nombre) {
+  this.nombre = nombre;
+}
+
+const juan = new Persona('Juan'); // Funciona bien
+
+// Función flecha
+const PersonaFlecha = (nombre) => {
+  this.nombre = nombre;
+}
+
+const pedro = new PersonaFlecha('Pedro'); // Esto lanzará un error

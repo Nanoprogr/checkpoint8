@@ -69,6 +69,15 @@
                 <br>
                 <img src="javascript 4.jpeg" alt="foto">
                 <br>
+                <img src="JavaScript 9.jpg" alt="foto">
+                <br>
+                <img src="JavaScript 1.jpg" alt="foto">
+                <br>
+                <img src="javascript 10.jpeg" alt="foto">
+                <br>
+                <img src="javascript 3.webp" alt="foto">
+                <br>
+                <img src="javascript 4.jpeg" alt="foto">
             </div>
 
         </div>
@@ -77,47 +86,58 @@
 
             <ul>
 
-                <li><b>FUNCIONES DE STRING EN JS</b>
+                <li><b>FUNCIONES FLECHA</b>
                         <p>
-                            Las funciones de cadena (string) en JavaScript son herramientas poderosas para manipular y trabajar con texto. </p>
+                            Las funciones flecha son una forma más concisa y elegante de escribir funciones en JavaScript. </p>
                 </li><br>
 
-                <li><b>SINTAXIS</b>
-                        <p>La sintaxis general para usar funciones de cadena en JavaScript es la siguiente:</p>
-                        <br><img src="funcionsjs.png" alt=""><br>
-                        <p><b>Donde:</b>
-
-                            <p><b>*Cadena:</b> es la variable que contiene la cadena a la cual se aplicará la función.
-                            </p><br>
-                            <p><b>*Funcion:</b> es el nombre de la función de cadena que deseas utilizar.
-                            </p><br>
-                            <p><b>*Argumentos:</b> son los valores opcionales que pueden ser necesarios para que la función realice su tarea.</p>
-                            </p><br>
+                <li><b>CARACTERISTICAS</b></li>
+                <li>SINTAXIS CORTA   <br>
+                        <p>En lugar de escribir la palabra clave function, simplemente usas una flecha =>, lo que hace que tu código sea más corto y fácil de leer.</p><br>
+                        <br><img src="FLECHASNTX.png" alt=""><br>
+                        <p>Las funciones flecha permiten una forma más concisa de escribir funciones en JavaScript. En el ejemplo, suma es una función que recibe dos parámetros a y b, y devuelve su suma. La versión con función flecha tiene menos código y hace lo mismo que la versión tradicional. </p>
                         </li><br>
 
-                <li><b>FUNCIONES</b>
-                    <p>Aquí tienes algunas de las funciones más comunes:</p>
+                <li> EL LEXICO DE THIS <br>
+                    <p> Una de las diferencias clave con las funciones tradicionales es que las funciones flecha no tienen su propio this. En cambio, heredan el this del contexto en el que fueron creadas. Esto puede ser útil en ciertas situaciones donde el contexto es importante. </p><br>
+                    <img src="flechathisnormal.png" alt=""><br>
+                    <p>ahora con la funcion flecha seria:</p><br>
+                    <img src="FLECHAANNO.png" alt=""><br>
+                    <p>En este ejemplo, map() recibe una función que eleva al cuadrado cada número en el array numeros, y la versión con función flecha es más concisa.</p><br>
                 </li><br>
 
-                <li><b>toUpperCase()</b>
-                        <p>Esta función se utiliza para convertir una cadena a letras mayúsculas. Es útil cuando necesitas normalizar el texto y asegurarte de que esté todo en mayúsculas.</p>
-                        <p>Por ejemplo:</p><br>
-                        <img src="toupperjs.png" alt="numeros en js">
-                        <p>En este ejemplo, la función toUpperCase() convierte la cadena "Hola Mundo" en "HOLA MUNDO", donde todos los caracteres están en mayúsculas.</p>
+                <li> IDEAL PARA FUNCIONES ANONIMAS <br>
+                    <p>  Son geniales cuando necesitas pasar funciones anónimas como argumentos, por ejemplo, en métodos de array como map(), filter(), reduce(), etc.</p><br>
+                    <img src="FLECHAANONOR.png" alt=""><br>
+                    <p>ahora con la funcion flecha seria:</p><br>
+                    <img src="flecha this.png" alt=""><br>
+                    <p>En este ejemplo, this en una función flecha no se refiere al objeto en el que se encuentra, sino al contexto global. Por lo tanto, this.nombre será undefined. Las funciones flecha no tienen su propio this, sino que heredan el this del contexto en el que fueron creadas.</p><br>
                 </li><br>
-                <li><b>indexOf(subcadena)</b>
-                    <p>Esta función encuentra la posición de la primera ocurrencia de una subcadena dentro de una cadena. Es muy útil cuando necesitas buscar una palabra o un fragmento de texto específico dentro de una cadena.</p>
-                    <p>Por ejemplo:</p><br>
-                    <img src="INDEXOFJS.png" alt="numeros en js">
-                    <p>En este caso, "Mundo" se encuentra en la posición 5 dentro de la cadena "Hola Mundo".</p>
-                    
+                <li> MAS LEGIBLE<br>
+                    <p>  En muchos casos, las funciones flecha hacen que tu código sea más claro y fácil de entender, especialmente cuando se trabaja con funciones de una sola línea.</p><br>
+                    <img src="FLECHALEGIBLE.png""><br>
+                    <p>Las funciones flecha pueden hacer que tu código sea más legible, especialmente en funciones simples de una sola línea. La función esPar devuelve true si el número es par y false si no lo es.</p><br>
                 </li><br>
-                <li><b>trim()</b>
-                    <p>Otra función útil es trim(), que elimina los espacios en blanco al principio y al final de una cadena.</p>
-                    <p>Por ejemplo:</p><br>
-                    <img src="trimjs.png" alt="numeros en js">
-                    <p>En este caso, la función trim() elimina los espacios en blanco al principio y al final de la cadena " Hola Mundo ", dejando solo "Hola Mundo".</p>
+                <li> RETORNO IMPLICITO<br>
+                    <p>  Si la función flecha tiene solo una expresión, esta se devuelve automáticamente, lo que significa que puedes omitir la palabra clave return.</p><br>
+                    <img src="FLECHARETUNR.png"><br>
+                    <p>En este ejemplo, duplicar devuelve el doble del número pasado como argumento.</p><br>
                 </li><br>
+                <li> NO SE USA NEW<br>
+                    <p>  Las funciones flecha no se pueden usar como constructores con el operador new, lo que significa que no pueden ser instanciadas.</p><br>
+                    <img src="FLECHANEWNOR.png"><br>
+                    <p>con la funcion flecha seria:</p><br>
+                    <img src="flechanew.png" alt="">
+                    <p>En este ejemplo, PersonaFlecha lanzará un error si se intenta utilizar con new.</p><br>
+                </li><br>
+                <li> CONCLUYENDO<br>
+                    <p>   las funciones flecha son una herramienta poderosa en JavaScript que puede hacer que tu código sea más limpio, más legible y más conciso, especialmente en situaciones donde necesitas funciones anónimas o funciones de una sola línea.</p><br>
+                </li><br>
+                <li> Para mas informacion: <br>
+                    <p>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions</p><br>
+                    <p>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions</p><br>
+                    <p>https://www.w3schools.com/js/js_arrow_function.asp</p>
+                </li>
             </ul>
 
         </div>
