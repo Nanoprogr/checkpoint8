@@ -13,7 +13,7 @@
     <header>
 
         <div class="titulo">
-            <h1>CHECKPOINT 7</h1>
+            <h1>CHECKPOINT 8</h1>
         </div>
 
         <nav>
@@ -62,6 +62,33 @@
                 <br>
                 <img src="JavaScript 1.jpg" alt="foto">
                 <br>
+                <img src="javascript 4.jpeg" alt="foto">
+                <br>
+                <img src="javascript 5.jpeg" alt="foto">
+                <br>
+                <img src="javascript 2.jpg" alt="foto">
+                <br>
+                <img src="JavaScript 7.jpg" alt="foto">
+                <br>
+                <img src="JavaScript 9.jpg" alt="foto">
+                <br>
+                <img src="javascript 2.jpg" alt="foto">
+                <br>
+                <img src="JavaScript 7.jpg" alt="foto">
+                <br>
+                <img src="JavaScript 9.jpg" alt="foto">
+                <br>
+                <img src="javascript 2.jpg" alt="foto">
+                <br>
+                <img src="JavaScript 7.jpg" alt="foto">
+                <br>
+                <img src="JavaScript 9.jpg" alt="foto">
+                <br><img src="javascript 2.jpg" alt="foto">
+                <br>
+                <img src="JavaScript 7.jpg" alt="foto">
+                <br>
+                <img src="JavaScript 9.jpg" alt="foto">
+                <br>
             </div>
 
         </div>
@@ -70,30 +97,94 @@
 
             <ul>
 
-                <li><b>¿QUE ES UN OPERADOR TERNARIO?</b>
-                        <p>
-                            Un operador ternario en JavaScript es un operador condicional que toma tres operandos y se utiliza para escribir expresiones condicionales de una manera más concisa.</P>
+                <li><b>¿QUE HACE EL OPERADOR DE EXTENSION EN JS?</b>
+                    <p>El operador de extensión en JavaScript, también conocido como el operador de propagación, es como una varita mágica que puede hacer que tu código sea más flexible y poderoso.</P><br>
+                    <p> Imagina que tienes una lista de ingredientes para hacer una pizza: </p><br>
+                    <p><b>const ingredientes = ['tomate', 'queso', 'pepperoni'];</b></p><br>
+                    <p>Ahora, quieres hacer otra pizza, pero esta vez con algunos ingredientes adicionales, como champiñones y aceitunas. Aquí es donde entra en juego el operador de extensión. Puedes usarlo para combinar fácilmente los ingredientes antiguos con los nuevos:</p><br>
+                    <p><b>const ingredientesExtra = ['champiñones', 'aceitunas'];<br>
+                        const todosLosIngredientes = [...ingredientes, ...ingredientesExtra];</b></p><br>
+                    <p>Y voilà! Ahora todosLosIngredientes tiene todos los ingredientes que necesitas para hacer una deliciosa pizza.</p><br>
+                    <p>¿Lo ves? El operador de extensión te permite fusionar arreglos, objetos o cualquier cosa que sea iterable en uno solo. Es como si estuvieras extendiendo una manta para cubrir más área.</p><br>
+                    <p>Y no sólo se limita a los arreglos. También puedes usarlo con objetos para combinar propiedades:</p><br>
+                    <p><b>const pizzaOriginal = { tipo: 'pepperoni', tamaño: 'mediano' };<br>
+                        const extras = { bebida: 'cola', postre: 'tarta de queso' };<br>
+                        const pizzaCompleta = { ...pizzaOriginal, ...extras };</b></p><br> 
+                    <p>Ahora, pizzaCompleta tiene todas las propiedades de pizzaOriginal y extras. Es una forma súper útil y concisa de combinar datos en JavaScript.</p><br>
                 </li><br>
+                <li><b>SINTAXIS</b><br>
+                    <br>
+                    <p>La sintaxis básica del operador de extensión es .... Puedes usarlo para expandir arreglos, objetos y otros elementos iterables en lugares donde se esperan múltiples elementos, como argumentos de función, elementos de un nuevo arreglo u objetos.</p><br>
+                    <p><b>const arreglo1 = [1, 2, 3];<br>
+                        const arreglo2 = [...arreglo1, 4, 5, 6];<br>
+                        console.log(arreglo2); // Imprimirá [1, 2, 3, 4, 5, 6]</b></p><br>
+                    <p> Al utilizar el operador de extensión con arreglos, puedes fusionar arreglos existentes, crear nuevos arreglos o extraer elementos de un arreglo.</p><br>
+                    <p><b>const primerArreglo = [1, 2, 3];<br>
+                        const segundoArreglo = [4, 5, 6];<br>
+                        const nuevoArreglo = [...primerArreglo, ...segundoArreglo];</b></p><br>
+                    <p>Con objetos, el operador de extensión copia todas las propiedades enumerables de un objeto a otro objeto. Si hay propiedades con el mismo nombre, la última propiedad en el objeto extendido sobrescribe las propiedades del mismo nombre en el objeto original.</p><br>
+                    <p><b>const objeto1 = { a: 1, b: 2 };<br>
+                        const objeto2 = { b: 3, c: 4 };<br>
+                        const objetoCombinado = { ...objeto1, ...objeto2 };</b></p><br>
+                    <p>En este caso, objetoCombinado tendría las propiedades { a: 1, b: 3, c: 4 }.</p><br>
+                    <p>Es importante recordar que el operador de extensión crea copias superficiales de los elementos que está extendiendo. Esto significa que si los elementos son objetos o arreglos, sus referencias se copian, no los valores en sí mismos. Esto puede llevar a comportamientos inesperados si estás trabajando con objetos o arreglos anidados y deseas mantener la inmutabilidad.</p><br>
+                    <p><b>const arregloOriginal = [1, 2, 3];<br>
+                        const arregloExtendido = [...arregloOriginal];<br>
+                        arregloExtendido.push(4);</b></p><br>
+                    <p>El operador de extensión es compatible con la mayoría de los navegadores modernos y se puede utilizar en la mayoría de los proyectos de JavaScript modernos. Sin embargo, es posible que encuentres problemas de compatibilidad si necesitas admitir navegadores más antiguos, por lo que debes considerar el uso de transpiladores como Babel para garantizar la compatibilidad con versiones anteriores de JavaScript.</p><br>
+                    <p>el operador de extensión es una herramienta poderosa y versátil en JavaScript que te permite fusionar arreglos, combinar objetos y hacer que tu código sea más limpio y conciso. Sin embargo, es importante entender cómo funciona en detalle para evitar comportamientos inesperados y aprovechar al máximo su potencial.</p><br>
+                    <p>El operador de extensión es útil cuando trabajas con funciones que aceptan un número variable de argumentos. Puedes usarlo para pasar un arreglo de argumentos a una función como una lista de argumentos separados.</p><br>
+                    <p><b>function suma(a, b, c) {<br>
+                        return a + b + c;<br>
+                      } <br>
+                      <br>
+                      const numeros = [1, 2, 3];<br>
+                      const resultado = suma(...numeros);</b></p><br>
+                      <p>En este caso, el operador de extensión ...numeros convierte el arreglo numeros en una lista de argumentos separados que se pasan a la función suma.</p><br>
+                      <p> El operador de extensión se utiliza a menudo para clonar objetos y arreglos de forma rápida y sencilla. Esto es útil cuando necesitas trabajar con una copia de un objeto o arreglo sin modificar el original.</p><br>
+                      <p><b>const original = { a: 1, b: 2 };<br>
+                        const copia = { ...original };<br>
+                        <br>
+                        const arregloOriginal = [1, 2, 3];<br>
+                        const arregloCopia = [...arregloOriginal];</b></p><br>
+                    <p>Tanto copia como arregloCopia contienen los mismos valores que original y arregloOriginal, respectivamente, pero son independientes de ellos.</p><br>
+                    <p>El operador de extensión solo puede utilizarse con elementos iterables, como arreglos, cadenas, objetos iterables (por ejemplo, Map y Set) y generadores. Intentar usar el operador de extensión con un objeto no iterable o una variable que no es un arreglo generará un error.</p><br>
+                    <p><b>const cadena = 'Hola';<br>
+                        const caracteres = [...cadena]; // ['H', 'o', 'l', 'a'] <br>
+                        <br>
+                        const mapa = new Map([[1, 'uno'], [2, 'dos']]);<br>
+                        const arregloDePares = [...mapa]; // [[1, 'uno'], [2, 'dos']]</b></p><br>
+                    <p>El operador de extensión es similar a los rest parameters (...) utilizados en la definición de funciones. Sin embargo, tienen diferentes propósitos: el operador de extensión se utiliza para desempaquetar elementos existentes, mientras que los rest parameters se utilizan para capturar argumentos en una función en una lista.</p><br>
+                    <p><b>function suma(...numeros) {<br>
+                        return numeros.reduce((total, numero) => total + numero, 0);<br>
+                      } <br>
+                      <br>
+                      const numeros = [1, 2, 3];<br>
+                      const resultado = suma(...numeros); // 6</b></p><br>
+                    <p>Aunque el operador de extensión es una forma conveniente de combinar arreglos y objetos, es importante tener en cuenta que puede tener un impacto en el rendimiento cuando se usan con arreglos grandes o en bucles que se ejecutan muchas veces. En estos casos, es posible que desees considerar alternativas más eficientes, como utilizar métodos de arreglos como concat o push.</p><br>
+                    <p><b>const arreglo1 = [1, 2, 3];<br>
+                        const arreglo2 = [4, 5, 6];<br>
+                        <br>
+                        // Alternativa eficiente usando concat <br>
+                        const nuevoArreglo = arreglo1.concat(arreglo2);<br>
+                        <br>
+                        // Alternativa eficiente usando push en lugar de spread <br>
+                        const otroArreglo = [...arreglo1];<br>
+                        arreglo2.forEach(elemento => otroArreglo.push(elemento));</b></p><br>
+                    <p>Cuando usas el operador de extensión con múltiples elementos, es importante tener en cuenta el orden en el que se aplican las extensiones. En el caso de objetos, la extensión ocurre de izquierda a derecha, lo que significa que las propiedades del objeto que aparecen más tarde en la lista sobrescribirán las propiedades con el mismo nombre que aparecen antes en la lista.</p><br>
+                    <p><b>const objeto1 = { a: 1, b: 2 };<br>
+                        const objeto2 = { b: 3, c: 4 };<br>
+                        const objetoCombinado = { ...objeto1, ...objeto2 };</b></p><br>
+                    <p>En este ejemplo, la propiedad b de objeto2 sobrescribirá la propiedad b de objeto1 en objetoCombinado. Por lo tanto, objetoCombinado tendrá las propiedades { a: 1, b: 3, c: 4 }.</p><br>
+                    <p>Con arreglos, la extensión ocurre de manera similar de izquierda a derecha, lo que significa que los elementos del arreglo que aparecen más tarde en la lista se añadirán al final del nuevo arreglo resultante.</p><br>
+                    <p><b>const arreglo1 = [1, 2, 3];<br>
+                        const arreglo2 = [4, 5, 6];<br>
+                        const nuevoArreglo = [...arreglo1, ...arreglo2];</b></p><br>
+                    <p>En este caso, nuevoArreglo contendrá [1, 2, 3, 4, 5, 6], con los elementos de arreglo2 añadidos al final del arreglo resultante.</p><br>
+                    <p>Entender el orden de extensión es fundamental para predecir el comportamiento del operador de extensión y evitar resultados inesperados al combinar objetos y arreglos en JavaScript.</p><br>
 
-                <li><b>SINTAXIS</b>
-                        <p> la sintaxis básica de los operadores ternarios en JavaScript es bastante sencilla. </P> 
-                            <P>Aquí tienes un ejemplo:</p>
-                        <br><img src="ternariojs.png" alt=""><br>
-                            <p>La idea básica es que condition es una expresión que se evalúa como verdadera o falsa. Si es verdadera, se devuelve expression1; de lo contrario, se devuelve expression2.
-                            </p><br>
+
                 </li>
-
-                <li><b>EJEMPLO</b>
-                    <img src="TERNARIOEJEJS.png" alt="">
-                    <p>En este ejemplo tenemos una variable llamada edad que tiene asignado el valor de 20.</p>
-                    <br>
-                    <p>Luego, usamos un operador ternario para asignar un mensaje a la variable mensaje dependiendo del valor de edad.</p>
-                    <br>
-                    <p>La condición (edad >= 18) se evalúa como verdadera porque la edad es 20, lo que significa que es mayor o igual a 18. Entonces, la expresión expression1 que sigue a ? se ejecuta, que en este caso es "Eres mayor de edad". Por lo tanto, el valor de mensaje será "Eres mayor de edad".</p>
-                    <br>  
-                    <p>Si la edad fuera, por ejemplo, 16, entonces la condición (edad >= 18) sería falsa, y se ejecutaría la expresión expression2, que en este caso es "Eres menor de edad". En resumen, el operador ternario nos permite tomar decisiones y asignar valores basados en una condición de manera concisa y clara.</p>
-                </li><br>
-
             </ul>
 
         </div>

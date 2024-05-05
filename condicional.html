@@ -85,45 +85,29 @@
                         <p><b>const [uno, dos, tres] = numeros;</b></p><br>
                         <p>Ahora uno sería igual a 1, dos sería igual a 2 y tres sería igual a 3! ¿Lo ves? Es como si estuvieras asignando cada elemento del arreglo a una variable diferente.</p><br>
                         <p>Y lo mismo se aplica a los objetos. Digamos que tienes un objeto con algunas propiedades:</p><br>
-                        <p><b>const persona = { nombre: 'Juan', edad: 30 };</b></p>
+                        <p><b>const persona = { nombre: 'Juan', edad: 30 };</b></p><br> 
                         <p>Puedes extraer esas propiedades directamente en variables con la deconstrucción de variables, asi:</p><br>
                         <p><b>const { nombre, edad } = persona;</b></p><br>
                         <p>Ahora nombre sería igual a 'Juan' y edad sería igual a 30.</p><br>
-                        <p>Es como abrir una caja y sacar lo que quieres, sin tener que lidiar con todo el paquete. Es una forma muy útil y elegante de trabajar con datos en JavaScript.</p>
+                        <p>Es como abrir una caja y sacar lo que quieres, sin tener que lidiar con todo el paquete. Es una forma muy útil y elegante de trabajar con datos en JavaScript.</p><br>
+                        <p><b>Uso con arreglos y objetos:</b> La deconstrucción no se limita a arreglos y objetos simples. También puedes anidarla, es decir, puedes usarla dentro de otras deconstrucciones para extraer valores de manera más profunda. por ejemplo:</p>
+                        <p><b>const persona = { nombre: 'Juan', edad: 30, direccion: { calle: '123 Main St', ciudad: 'Ciudad' } };</b></p><br>
+                        <p><b>const { nombre, edad, direccion: { calle, ciudad } } = persona;</b></p><br>
+                        <p>En este ejemplo, además de extraer nombre y edad del objeto persona, también estamos extrayendo calle y ciudad de la propiedad direccion.</p><br>
+                        <p><b>Asignación por defecto:</b> Puedes proporcionar valores por defecto en caso de que el valor extraído sea undefined.</p><br>
+                        <p><b>const { nombre, edad, trabajo = 'Desconocido' } = persona;</b></p><br>
+                        <p>Aquí, si persona no tiene la propiedad trabajo, trabajo tomará el valor 'Desconocido'.</p><br>
+                        <p><b>Renombramiento de variables:</b> Puedes renombrar las variables al extraerlas.</p><br>
+                        <p><b>const { nombre: firstName, edad: age } = persona;</b></p><br>
+                        <p>Ahora, en lugar de nombre y edad, tenemos firstName y age.   </p><br>
+                        <p><b>Uso en funciones:</b> También puedes usar la deconstrucción en la lista de argumentos de una función.</p>
+                        <p><b>function mostrarNombre({ nombre }) {<br>
+                            console.log(nombre);<br>    
+                        } <br>
+                        mostrarNombre(persona);</b></p><br>
+                        <p>Esta función mostrarNombre toma un objeto como argumento y muestra su propiedad nombre.</p><br>
+                        <p>La deconstrucción de variables puede ahorrarte tiempo y hacer tu código más claro al permitirte extraer fácilmente los datos que necesitas de arreglos y objetos en JavaScript.</p><br>
                 </li><br>
-
-                <li><b>SINTAXIS</b>
-                        <p> la sintaxis básica de los condicionales en JavaScript es bastante sencilla. </P> 
-                            <P>Aquí tienes un ejemplo:</p>
-                        <br><img src="CONDICIONALJS.png" alt=""><br>
-                        <p><b>Donde:</b>
-
-                            <p><b>*if (condition)</b> Aquí especificas la condición que quieres evaluar. Si esta condición es verdadera, se ejecuta el bloque de código dentro de las llaves {}
-                            </p><br>
-                            <P>EJEMPLO DE IF</P><br>
-                            <img src="IFJS.png" alt="if">
-                            <p>En este caso, el if determina si el numero es mayor que 5 y envia la impresion de es mayor que 5 </p>
-                            <br>
-                            <p><b>*else if (condition2)</b> Si la primera condición no es verdadera, se evalúa esta segunda condición. Si es verdadera, se ejecuta el bloque de código correspondiente.
-                            </p><br>
-                            <P>EJEMPLO DE ELSE IF</P><br>
-                            <img src="ELSEIFJS.png" alt="ELSEif">
-                            <p>En este caso, el if determina si el numero es mayor que 15 y envia la impresion de es mayor que 15, else if dice que si el numero es mayor que 5 se envie la impresion de que es mayor que 5 pero menor que 15 </p>
-                            <br>
-                            <p>Como podemos intuir, en caso de que no se cumpla la primera condición (if) se establece una segunda condicion (el if) por lo que podemos decir efectivamente que si la primera condicion no se cumple pero la segunda si, pues el numero es menor a 15 ya que era la primera condicion que cumplir</p>
-                            <br>
-                            <p><b>*else</b> Este es el bloque que se ejecuta si ninguna de las condiciones anteriores es verdadera. No lleva una condición, ya que se ejecuta por defecto si ninguna de las anteriores se cumple.</p>
-                            </p><br>
-                            <P>EJEMPLO DE ELSE </P><br>
-                            <img src="elsejs.png" alt="ELSEif">
-                            <p>En este caso, el if determina si el numero es mayor que 5 y envia la impresion de es mayor que 5, else nos dice que si no se cumple la condicion entonces se ejecute otro bloque de codigo, en este caso que envie la impresion de es menor o igual que 5 </p>
-                            <br>
-                        </li><br>
-
-                <li><b>EN RESUMEN</b>
-                    <p>Un condicional en JavaScript es una estructura de control que permite tomar decisiones en función de ciertas condiciones. Esto significa que puedes ejecutar diferentes bloques de código dependiendo de si una condición específica es verdadera o falsa.</p>
-                </li><br>
-
             </ul>
 
         </div>
