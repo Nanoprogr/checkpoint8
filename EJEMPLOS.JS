@@ -351,3 +351,25 @@ Promise.race([promesa1, promesa2])
 
 
 
+    async function obtenerDatos() {
+      try {
+        const resultado = await fetch('https://api.example.com/data');
+        const datos = await resultado.json();
+        console.log(datos);
+      } catch (error) {
+        console.error('Error al obtener los datos:', error);
+      }
+    }
+
+
+    async function obtenerDatosConcurrentemente() {
+      const [datos1, datos2] = await Promise.all([
+        obtenerDatosDeAPI1(),
+        obtenerDatosDeAPI2()
+      ]);
+      console.log('Datos 1:', datos1);
+      console.log('Datos 2:', datos2);
+    }
+
+
+

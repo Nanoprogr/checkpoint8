@@ -42,3 +42,124 @@
                 <a href="asyn.html">¿Qué hacen async y await por nosotros?</a>
             </div>
         </nav>
+
+
+    </header>
+
+    <div class="contenedor">
+
+        <div class="column_img">
+
+            <div>
+                <img src="javascript 3.webp"foto">
+                <br>
+                <img src="javascript 4.jpeg" alt="foto">
+                <br>
+                <img src="JavaScript 7.jpg" alt="foto">
+                <br>
+                <img src="javascript 5.jpeg" alt="foto">
+                <br>
+                <img src="javascript 2.jpg" alt="foto">
+                <br>
+                <img src="JavaScript 7.jpg" alt="foto">
+                <br>
+                <img src="JavaScript 9.jpg" alt="foto">
+                <br>
+                <img src="javascript 5.jpeg" alt="foto">
+                <br>
+                <img src="javascript 10.jpeg" alt="foto">
+                <br>
+                <img src="javascript 3.webp" alt="foto">
+                <br>
+                <img src="javascript 4.jpeg" alt="foto">
+                <br>
+                <img src="javascript 5.jpeg" alt="foto">
+                <br>
+                <img src="javascript 10.jpeg" alt="foto">
+                <br>
+                <img src="javascript 3.webp" alt="foto">
+                <br>
+                <img src="javascript 3.webp" alt="foto">
+                <br>
+                <img src="javascript 4.jpeg" alt="foto">
+            </div>
+
+        </div>
+
+        <div class="column_list">
+
+            <ul>
+
+                <li><b>¿QUE HACEN ASYNC Y AWAIT POR NOSOTROS?</b>
+                    <p>Piensa en async y await como una pareja dinámica que trabaja junta para hacer que tu código asincrónico sea más fácil de entender y manejar.</p><br>
+                    <p> <b>async:</b> Imagina que estás en una fila para comprar helado. Cuando agregas la palabra clave async antes de una función, estás diciendo que esta función puede hacer una pausa y esperar algo, pero no se detendrá por completo. Es como si la persona que está comprando helado te diga "Espérame un momento, tengo que hacer una llamada rápida, pero seguiré esperando en la fila contigo".</p><br>
+                    <p><b>async function comprarHelado() { <br>
+                        // Código para comprar helado... <br>
+                      }</b></p><br>
+                    <p>Con async, la función se ejecuta de manera asíncrona, lo que significa que puede continuar con otras tareas mientras espera que se resuelva una promesa, por ejemplo </p> <br>
+                    <p><b>await: </b> Ahora, imagina que la persona que está comprando helado recibe una llamada telefónica importante mientras está en la fila. En lugar de ignorar la llamada y seguir adelante, utiliza la palabra clave await para pausar la función y esperar hasta que la llamada termine. Es como si dijera "Espera un momento, necesito tomar esta llamada, pero no te preocupes, continuaré en la fila después".</p><br>
+                    <p><b>async function comprarHelado() { <br>
+                        const llamada = await responderLlamada(); <br>
+                        // Continuar comprando helado después de la llamada... <br>
+                      }</b></p><br>
+                    <p>Con await, la función se detiene y espera a que una promesa se resuelva antes de continuar con el siguiente bloque de código. Esto hace que el código asincrónico se vea más como código síncrono, lo que lo hace mucho más fácil de entender y mantener.</p><br>
+                    <p>Una gran ventaja de usar async y await es que facilitan el manejo de errores en código asincrónico. Puedes usar try-catch para capturar y manejar los errores de manera más clara y concisa.</p><br>
+                    <p><b>async function obtenerDatos() {
+                        try {
+                          const resultado = await fetch('https://api.example.com/data');
+                          const datos = await resultado.json();
+                          console.log(datos);
+                        } catch (error) {
+                          console.error('Error al obtener los datos:', error);
+                        }
+                      }</b></p><br>
+                    <p>En este ejemplo, try-catch envuelve el código asincrónico, lo que permite capturar cualquier error que ocurra durante la ejecución de las promesas.</p><br>
+                    <p>Puedes usar async y await con funciones existentes que devuelven promesas. Esto te permite integrar fácilmente el nuevo código asincrónico con el código existente.</p><br>
+                    <p>function obtenerResultado() {
+                        return new Promise((resolve) => {
+                          setTimeout(() => resolve('¡Resultado obtenido!'), 2000);
+                        });
+                      }
+                      
+                      async function mostrarResultado() {
+                        const resultado = await obtenerResultado();
+                        console.log(resultado);
+                      }
+                      
+                      mostrarResultado();</p><br>
+                    <p>la función mostrarResultado() utiliza await para esperar a que se resuelva la promesa devuelta por obtenerResultado() antes de mostrar el resultado.</p><br>
+                    <p>Aunque async y await hacen que el código asincrónico sea más legible, es importante tener en cuenta que puede haber un ligero impacto en el rendimiento debido a la naturaleza de la espera de promesas. Sin embargo, en la mayoría de los casos, la diferencia de rendimiento es insignificante y la claridad del código compensa con creces cualquier pequeña pérdida de rendimiento.</p><br>
+                    <p>Las funciones async y await son compatibles con la mayoría de los navegadores modernos, pero es posible que encuentres problemas de compatibilidad si necesitas admitir versiones más antiguas de los navegadores. En esos casos, puedes utilizar herramientas como Babel para transpilar tu código a una forma compatible con versiones anteriores de JavaScript.</p><br>
+                    <p>async y await son herramientas poderosas que hacen que el código asincrónico en JavaScript sea más fácil de leer, escribir y mantener. Su integración con el manejo de errores, compatibilidad con funciones existentes y rendimiento general los convierten en una opción sólida para el desarrollo de aplicaciones modernas en la web.</p><br>
+                    <p>Aunque las funciones async y await facilitan la escritura de código asincrónico, es importante recordar que, por defecto, el código que espera una promesa con await se ejecuta de manera secuencial. Sin embargo, puedes aprovechar el paralelismo utilizando múltiples await en diferentes promesas si no tienen dependencias entre sí.</p><br>
+                    <p><b>async function obtenerDatosConcurrentemente() {
+                        const [datos1, datos2] = await Promise.all([
+                          obtenerDatosDeAPI1(),
+                          obtenerDatosDeAPI2()
+                        ]);
+                        console.log('Datos 1:', datos1);
+                        console.log('Datos 2:', datos2);
+                      }</b></p><br>
+                      <p>obtenerDatosDeAPI1() y obtenerDatosDeAPI2() se ejecutan en paralelo, lo que puede mejorar el rendimiento cuando las operaciones son independientes entre sí.</p><br>
+                    <p>Una limitación de las funciones async y await es que no proporcionan una forma nativa de cancelar una promesa en medio de su ejecución. Sin embargo, existen bibliotecas de terceros, como axios, que ofrecen funcionalidades de cancelación de promesas.</p><br>
+                    <p>Al depurar código que utiliza async y await, es importante tener en cuenta que los errores dentro de las promesas se propagarán como excepciones y pueden ser manejados utilizando bloques try-catch. Sin embargo, ten en cuenta que los errores en las promesas rechazadas pueden no ser inmediatamente evidentes si no se capturan adecuadamente.</p><br>
+                    <p>Aunque async y await son herramientas poderosas, es posible que encuentres situaciones donde las funciones generadoras (function* y yield) son más adecuadas. Las funciones generadoras son útiles cuando necesitas generar secuencias de valores de manera diferida o cuando deseas crear iteradores personalizados.</p><br>
+                    <p>Aunque async y await son una forma moderna y conveniente de trabajar con código asincrónico, es importante recordar que existen otros patrones y técnicas asincrónicas en JavaScript, como callbacks y Promesas. Puedes mezclar y combinar estos patrones según sea necesario en tu código.</p><br>
+                    <p>Mientras que async y await pueden facilitar la escritura de código asincrónico, también es importante considerar el desempeño y la escalabilidad de tu aplicación. El uso excesivo de await puede conducir a un código que se ejecuta de manera síncrona, lo que puede afectar negativamente el rendimiento de la aplicación, especialmente en aplicaciones de alta carga.</p><br>
+                    <p>Al usar await dentro de métodos de objetos o clases, es importante recordar que el contexto de this dentro de la función await puede ser diferente al contexto de this fuera de la función await. Puedes necesitar enlazar explícitamente el contexto de this si necesitas acceder a propiedades o métodos del objeto o clase.</p><br>
+                    <p>Cuando trabajas con bucles en funciones async, es importante recordar que await no funciona de la misma manera que en código síncrono. En un bucle for, por ejemplo, todas las iteraciones se ejecutarán simultáneamente si se utilizan await dentro del bucle. Puedes necesitar usar técnicas como el uso de Promise.all() o funciones recursivas para manejar este comportamiento de manera efectiva.</p><br>
+                    <p><b>PARA MAYOR INFORMACION</b></p>
+                    <P>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function</P>
+                    <P>https://javascript.info/async-await</P>
+                    <p>https://www.w3schools.com/js/js_async.asp</p>
+                </li><br>
+                
+            </ul>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
