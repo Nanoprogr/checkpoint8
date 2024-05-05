@@ -13,7 +13,7 @@
     <header>
 
         <div class="titulo">
-            <h1>CHECKPOINT 7</h1>
+            <h1>CHECKPOINT 8</h1>
         </div>
 
         <nav>
@@ -61,6 +61,26 @@
                 <br>
                 <img src="JavaScript 9.jpg" alt="foto">
                 <br>
+                <img src="javascript 4.jpeg" alt="foto">
+                <br>
+                <img src="javascript 5.jpeg" alt="foto">
+                <br>
+                <img src="JavaScript 9.jpg" alt="foto">
+                <br>
+                <img src="JavaScript 7.jpg" alt="foto">
+                <br>
+                <img src="JavaScript 9.jpg" alt="foto">
+                <br>
+                <img src="javascript 4.jpeg" alt="foto">
+                <br>
+                <img src="javascript 5.jpeg" alt="foto">
+                <br>
+                <img src="JavaScript 9.jpg" alt="foto">
+                <br>
+                <img src="JavaScript 7.jpg" alt="foto">
+                <br>
+                <img src="JavaScript 9.jpg" alt="foto">
+                <br>
             </div>
 
         </div>
@@ -69,28 +89,87 @@
 
             <ul>
 
-                <li><b>¿Cuál es la diferencia entre una declaración de función y una expresión de función?</b>
-                        <p>
-                            Una declaración de función y una expresión de función son dos formas diferentes de definir funciones en JavaScript.</P>
+                <li><b>¿QUE ES LA PROGRAMACION ORIENTADA A OBJETOS?</b>
+                    <p>La programación orientada a objetos (POO) es como construir y organizar una ciudad imaginaria con diferentes tipos de edificios, personas y vehículos. Cada uno de estos elementos tiene características y comportamientos específicos que los hacen únicos, pero también comparten similitudes con otros elementos de la ciudad. <br>
+                    <br>
+                    En la POO, todo se trata de objetos, que son como pequeñas unidades independientes que pueden tener datos (llamados atributos o propiedades) y acciones (llamadas métodos o funciones). <br>
+                    <br>
+                    Tomemos el ejemplo de un automóvil. En POO, podríamos crear un objeto llamado "Automóvil" que tenga propiedades como "color", "marca", "modelo" y métodos como "arrancar", "detenerse", "acelerar" y "girar". <br>
+                    <br>
+                    Cada automóvil que creamos a partir de este objeto tiene sus propias características únicas, como su color, marca y modelo, pero todos comparten las mismas acciones básicas, como arrancar y detenerse.</p><br>
                 </li><br>
-
-                <li><b>Declaración de función:</b>
-                        <p> En una declaración de función, utilizamos la palabra clave function seguida del nombre de la función y luego el cuerpo de la función entre llaves {}.</P> 
+                <li><b>PRINCIPIOS BASICOS</b><br>
+                    <br>
+                    <p><b>Abstracción: </b>Es como ver un objeto desde lejos y enfocarte solo en los detalles que son importantes para ti. Por ejemplo, cuando conduces un automóvil, no necesitas conocer todos los detalles internos del motor; solo necesitas saber cómo arrancarlo y detenerlo.</p><br>
+                    <p><b>POR EJEMPLO:</b> Imagina que estás creando un juego de rol (RPG) donde los jugadores tienen diferentes habilidades. Para mantener las cosas simples, decides enfocarte solo en algunas habilidades importantes, como "ataque", "defensa" y "salud", y no te preocupas por detalles menos relevantes, como la velocidad de movimiento o la resistencia a la magia.En este caso, estás aplicando el principio de abstracción al centrarte solo en los aspectos más importantes y relevantes del jugador para el juego.</p><br>
+                    <p><b>Encapsulamiento:</b> Es como poner un objeto dentro de una caja y sellarla. Los datos y el código que pertenecen a un objeto se mantienen juntos y protegidos del mundo exterior. Esto ayuda a prevenir que otros objetos interfieran o modifiquen los datos de un objeto de manera no autorizada.</p><br>
+                    <p><b>POR EJEMPLO:</b>Supongamos que estás desarrollando un sistema de gestión de cuentas bancarias. Cada cuenta bancaria tiene un saldo y métodos para depositar y retirar dinero. Para asegurarte de que el saldo de una cuenta solo pueda ser modificado de manera controlada y segura, encapsulas el saldo como un atributo privado y proporcionas métodos públicos como depositar() y retirar() para interactuar con él.</p><br>
+                    <p><b>class CuentaBancaria {<br>
+                        #saldo = 0;<br>
+                      <br>
+                        depositar(cantidad) {<br>
+                           this.#saldo += cantidad;<br>
+                        } <br>
+                      <br>
+                        retirar(cantidad) {<br>
+                          if (cantidad <= this.#saldo) { <br>
+                            this.#saldo -= cantidad; <br>
+                          } else { <br>
+                            console.log("Saldo insuficiente."); <br>
+                          } <br>
+                        } <br>
+                      <br>
+                        obtenerSaldo() { <br>
+                          return this.#saldo; <br>
+                        } <br>
+                      } <br>
+                      <br>
+                      const miCuenta = new CuentaBancaria(); <br>
+                      miCuenta.depositar(100); <br>
+                      miCuenta.retirar(50); <br>
+                      console.log(miCuenta.obtenerSaldo()); // Imprimirá 50</b></p><br>
+                    <p>En este ejemplo, #saldo está encapsulado dentro de la clase CuentaBancaria, y solo puede ser accedido y modificado a través de los métodos públicos depositar() y retirar().</p><br>
+                    <p><b>Herencia:</b> Es como tener una familia de objetos donde los hijos heredan características y comportamientos de sus padres. Esto nos permite crear nuevos objetos basados en otros existentes, reutilizando código y evitando la duplicación</p><br>
+                    <p><b>POR EJEMPLO:</b>Supongamos que estás creando un juego de video donde hay diferentes tipos de personajes, como guerreros, magos y arqueros. Todos estos personajes comparten algunas características comunes, como puntos de vida y habilidades de ataque, pero también tienen habilidades únicas que los distinguen.Puedes crear una clase base llamada Personaje que define las características comunes y luego crear subclases como Guerrero, Mago y Arquero que heredan estas características y añaden sus propias habilidades específicas.</p><br>
+                    <p><b>class Personaje { <br>
+                        constructor(nombre, vida, ataque) {<br>
+                          this.nombre = nombre; <br>
+                          this.vida = vida; <br>
+                          this.ataque = ataque; <br>
+                        } <br>
+                      <br>
+                        atacar(objetivo) { <br>
+                          console.log(`${this.nombre} ataca a ${objetivo.nombre}!`);<br>
+                          objetivo.recibirAtaque(this.ataque); <br>
+                        } <br>
+                      <br>
+                        recibirAtaque(daño) {<br>
+                          this.vida -= daño; <br>
+                          console.log(`${this.nombre} recibe ${daño} puntos de daño.`);<br>
+                        } <br>
+                      } <br>
+                      <br>
+                      class Guerrero extends Personaje { <br>
+                        constructor(nombre) { <br>
+                          super(nombre, 100, 10); <br>
+                        } <br>
+                      <br>
+                        // Método específico del Guerrero <br>
                         <br>
-                        <P>Las declaraciones de función se pueden llamar antes de que se definan, debido al hoisting de funciones en JavaScript.</p>
-                        <br><p><b>EJEMPLO</b></p>
-                            <br><img src="DECFUNJS.png" alt=""><br>
+                        usarEspada() { <br>
+                          console.log(`${this.nombre} usa su espada para atacar!`);<br>
+                        } <br>
+                      } <br>
+                      <br>
+                      const jugador1 = new Guerrero("Aragorn"); <br>
+                      const jugador2 = new Personaje("Goblin", 50, 5);<br>
+                      <br>
+                      jugador1.usarEspada(); // Aragorn usa su espada para atacar! <br>
+                      jugador1.atacar(jugador2); // Aragorn ataca a Goblin!</b></p><br>
+                    <p>En este ejemplo, la clase Guerrero hereda las propiedades y métodos de la clase base Personaje, pero también agrega su propio método usarEspada().</p><br>
+                    <p><b>Polimorfismo:</b> Es como tener diferentes formas de hacer las mismas cosas. En POO, podemos tener diferentes objetos que pueden responder de manera diferente a la misma acción. Por ejemplo, un automóvil y una bicicleta pueden tener métodos llamados "moverse", pero cada uno lo hace de manera diferente.</p><br>
+                    <p><b>POR EJEMPLO:</b>Supongamos que tienes un juego de cartas donde hay diferentes tipos de cartas, como cartas de ataque, cartas de defensa y cartas de curación. Cada tipo de carta tiene un método jugar() que realiza una acción específica cuando se juega.Aunque todas las cartas tienen un método jugar(), cada tipo de carta implementa este método de manera diferente. Por ejemplo, una carta de ataque puede hacer daño al oponente, una carta de defensa puede aumentar la defensa del jugador y una carta de curación puede aumentar la salud del jugador.En este caso, el polimorfismo permite que diferentes objetos respondan de manera diferente al mismo método jugar(), dependiendo de su tipo.</p><br>
                 </li>
-
-                <li><b>Expresión de función:</b>
-                    <p>En una expresión de función, creamos una función y la asignamos a una variable o la pasamos como argumento a otra función.</p>
-                    <br>
-                    <p>Las expresiones de función no son elevadas (hoisted) como las declaraciones de función, lo que significa que solo están disponibles después de la línea en la que se definen.</p>
-                    <br>
-                    <br><p><b>EJEMPLO</b></p>
-                            <br><img src="EXPFUNJS.png" alt=""><br>  
-                </li><br>
-
             </ul>
 
         </div>
