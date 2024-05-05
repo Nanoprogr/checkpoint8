@@ -13,7 +13,7 @@
     <header>
 
         <div class="titulo">
-            <h1>CHECKPOINT 7</h1>
+            <h1>CHECKPOINT 8</h1>
         </div>
 
         <nav>
@@ -81,44 +81,38 @@
 
             <ul>
 
-                <li><b>¿Qué es la palabra clave "this" en JS?</b>
-                        <p>La palabra clave "this" en JavaScript se refiere al objeto al que pertenece el contexto de ejecución actual. Su valor depende de cómo se llama la función y de dónde se encuentra la invocación de la función.</P>
-                        <br>
-                        <p>Imagina que "this" es como un puntero que señala a algo en el mundo de JavaScript. Pero lo interesante es que a qué apunta ese puntero puede cambiar dependiendo de cómo se llama una función y desde dónde se llama.</p>
+                <li><b>¿QUE ES UNA PROMESA EN JS?</b>
+                    <p>En JavaScript, una promesa es un objeto que representa un valor futuro o una operación asincrónica que aún no se ha completado. Es como una promesa en la vida real: te asegura que algo sucederá en el futuro, pero no necesariamente en ese momento exacto.</p><br>
+                    <p> Imagina que le pides a tu amigo que te preste su bicicleta para ir al trabajo. Tu amigo te hace una promesa de que te prestará su bicicleta mañana por la mañana. Ahora, tienes la promesa de que tendrás una bicicleta para ir al trabajo, pero todavía no tienes la bicicleta físicamente en tus manos.</p><br>
+                    <p><b>ESTADOS DE LA PROMESA</b></p><br>
+                    <p><b>Pendiente:</b> Cuando creas una promesa, está en estado "pendiente" porque la operación asociada aún no se ha completado.</p> <br>
+                    <p><b>Cumplida:</b> Una vez que la operación se completa con éxito, la promesa pasa al estado "cumplida" y te devuelve el resultado. </p><br>
+                    <p><b>Rechazada:</b> Si la operación falla, la promesa pasa al estado "rechazada" y te devuelve un motivo de error.</p><br>
+                    <p><b>CREACION DE LAS PROMESAS</b></p><br>
+                    <p>Puedes crear una promesa usando la sintaxis new Promise(). Dentro del constructor de la promesa, proporcionas una función que toma dos argumentos: resolve y reject. Llamas a resolve cuando la operación se completa con éxito y devuelves el resultado deseado. Llamas a reject si la operación falla y proporcionas un motivo de error.</p><br>
+                    <p><b>const miPromesa = new Promise((resolve, reject) => { <br>
+                        // Simulando una operación asincrónica (por ejemplo, una solicitud HTTP) <br>
+                        setTimeout(() => { <br>
+                            const exito = true; // Simular si la operación fue exitosa o no <br>   
+                            if (exito) { <br>
+                             resolve("¡Operación completada con éxito!"); <br> 
+                              } else { <br>     
+                                reject("¡Algo salió mal!"); <br>
+                               } <br>  
+                            }, 2000); // Simular un retraso de 2 segundos <br>
+                        });</b></p><br>
+                    <p><b>CONSUMO DE PROMESAS</b></p><br>
+                    <p>Una vez que tienes una promesa, puedes "consumirla" usando los métodos .then() y .catch(). El método .then() se ejecuta cuando la promesa se cumple, y el método .catch() se ejecuta cuando la promesa se rechaza.</p><br>
+                    <p><b>miPromesa <br>
+                        .then((resultado) => { <br>
+                          console.log(resultado); // Imprimirá "¡Operación completada con éxito!" <br>
+                        }) <br>
+                        .catch((error) => { <br>
+                          console.error(error); // Imprimirá "¡Algo salió mal!" <br>
+                        });</b></p><br>
+                    <p>También puedes encadenar múltiples .then() para manejar múltiples promesas secuenciales.</p><br>
                 </li><br>
-
-                <li><b>EN UNA FUNCION NORMAL</b>
-                <p> Cuando usas "this" dentro de una función normal, generalmente apunta al objeto global, que es como el entorno principal donde se ejecuta tu código.</P>
-                <br><p><b>EJEMPLO</b></p>
-                <br><img src="THISNORJS.png" alt=""><br>
-                <P>En este ejemplo, definimos una función llamada saludar.</p><br>
-                <p>Dentro de la función, usamos console.log para imprimir un mensaje que incluye la palabra clave this.</p>
-                <br><p>Cuando llamamos a la función saludar por sí sola (saludar()), this hace referencia al objeto global en el navegador, que es Window. </p>
-                <br><p>Por lo tanto, el mensaje impreso será "Hola, soy Window".</P>
-                </li>
-
-                <li><b>EN UN METODO DE UN OBJETO</b>
-                <p> Si usas "this" dentro de un método de un objeto, apuntará al propio objeto al que pertenece ese método. Es como si "this" estuviera apuntando hacia el objeto que lo contiene.</P>
-                <br><p><b>EJEMPLO</b></p>
-                <br><img src="THISMETJS.png" alt=""><br>
-                <P>Creamos un objeto llamado persona con una propiedad nombre y un método saludar</p><br>
-                <p>Dentro del método saludar, usamos this.nombre para acceder al valor de la propiedad nombre del objeto actual.</p>
-                <br><p>Cuando llamamos al método saludar del objeto persona (persona.saludar()), this hace referencia al propio objeto persona. </p>
-                <br><p>Por lo tanto, el mensaje impreso será "Hola, soy Juan".</P>
-                </li>
-                <li><b>EN UNA FUNCION FLECHA</b>
-                <p>En las funciones flecha, "this" funciona de manera diferente. En lugar de apuntar al objeto que lo rodea, "this" en una función flecha toma el valor de "this" en el contexto en el que se definió la función flecha. Es como si "this" mirara hacia arriba y usara el valor de "this" del lugar donde se creó la función flecha.</P>
-                <br><p><b>EJEMPLO</b></p>
-                <br><img src="THISFLEJS.png" alt=""><br>
-                <P>Creamos un objeto llamado objeto con una propiedad valor y un método obtenerValor.</p><br>
-                <p>Dentro del método obtenerValor, definimos una función flecha llamada funcionFlecha.</p>
-                <br><p>Dentro de funcionFlecha, usamos this.valor para acceder al valor de la propiedad valor del objeto actual.</p>
-                <br><p>Aunque la función flecha está dentro de un método de un objeto, this dentro de la función flecha hace referencia al contexto léxico donde se definió la función (obtenerValor), no al objeto objeto.</P>
-                <br><p>Por lo tanto, cuando llamamos al método obtenerValor (objeto.obtenerValor()), el mensaje impreso será "El valor es 42".</p>
-                </li>
-                <li><b>TENER EN CUENTA</b>
-                <p>"this" en JavaScript puede comportarse de manera diferente dependiendo de dónde se utilice, ya sea en una función normal, un método de un objeto o una función flecha. Es importante entender cómo se resuelve "this" en cada contexto para evitar confusiones al acceder a las propiedades y métodos de los objetos.</P>
-                </li>
+                
             </ul>
 
         </div>
