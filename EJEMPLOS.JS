@@ -183,7 +183,7 @@ const pedro = new PersonaFlecha('Pedro'); // Esto lanzará un error
 
 
 
-Copy code
+
 class CuentaBancaria {
   #saldo = 0;
 
@@ -301,7 +301,7 @@ miPromesa
 
 
 
-    const promesa1 = Promise.resolve(1);
+const promesa1 = Promise.resolve(1);
 const promesa2 = new Promise((resolve) => setTimeout(() => resolve(2), 1000));
 const promesa3 = Promise.reject("Error");
 
@@ -323,7 +323,7 @@ Promise.all([promesa1, promesa3])
 
 
 
-  const promesa1 = new Promise((resolve) => setTimeout(() => resolve(1), 2000));
+const promesa1 = new Promise((resolve) => setTimeout(() => resolve(1), 2000));
 const promesa2 = new Promise((resolve) => setTimeout(() => resolve(2), 1000));
 
 Promise.race([promesa1, promesa2])
@@ -372,4 +372,13 @@ Promise.race([promesa1, promesa2])
     }
 
 
-
+    function obtenerResultado() {
+      return new Promise((resolve) => {
+        setTimeout(() => resolve('¡Resultado obtenido!'), 2000);
+      });
+    }
+    async function mostrarResultado() {
+      const resultado = await obtenerResultado();
+      console.log(resultado);
+    }
+    mostrarResultado();

@@ -73,6 +73,13 @@
                 <br>
                 <img src="javascript 4.jpeg" alt="foto">
                 <br>
+                <img src="javascript 5.jpeg" alt="foto">
+                <br>
+                <img src="javascript 10.jpeg" alt="foto">
+                <br>
+                <img src="javascript 3.webp" alt="foto">
+                <br>
+                <img src="javascript 4.jpeg" alt="foto">
             </div>
 
         </div>
@@ -90,84 +97,23 @@
                     <p><b>Rechazada:</b> Si la operación falla, la promesa pasa al estado "rechazada" y te devuelve un motivo de error.</p><br>
                     <p><b>CREACION DE LAS PROMESAS</b></p><br>
                     <p>Puedes crear una promesa usando la sintaxis new Promise(). Dentro del constructor de la promesa, proporcionas una función que toma dos argumentos: resolve y reject. Llamas a resolve cuando la operación se completa con éxito y devuelves el resultado deseado. Llamas a reject si la operación falla y proporcionas un motivo de error.</p><br>
-                    <p><b>const miPromesa = new Promise((resolve, reject) => { <br>
-                        // Simulando una operación asincrónica (por ejemplo, una solicitud HTTP) <br>
-                        setTimeout(() => { <br>
-                            const exito = true; // Simular si la operación fue exitosa o no <br>   
-                            if (exito) { <br>
-                             resolve("¡Operación completada con éxito!"); <br> 
-                              } else { <br>     
-                                reject("¡Algo salió mal!"); <br>
-                               } <br>  
-                            }, 2000); // Simular un retraso de 2 segundos <br>
-                        });</b></p><br>
+                    <img src="promesa-1.png" alt="">
                     <p><b>CONSUMO DE PROMESAS</b></p><br>
                     <p>Una vez que tienes una promesa, puedes "consumirla" usando los métodos .then() y .catch(). El método .then() se ejecuta cuando la promesa se cumple, y el método .catch() se ejecuta cuando la promesa se rechaza.</p><br>
-                    <p><b>miPromesa <br>
-                        .then((resultado) => { <br>
-                          console.log(resultado); // Imprimirá "¡Operación completada con éxito!" <br>
-                        }) <br>
-                        .catch((error) => { <br>
-                          console.error(error); // Imprimirá "¡Algo salió mal!" <br>
-                        });</b></p><br>
+                    <img src="promesa-2.png" alt="">
                     <p>También puedes encadenar múltiples .then() para manejar múltiples promesas secuenciales.</p><br>
                     <p><b>ENCADENAMIENTO DE PROMESAS</b></p><br>
                     <p>Una de las características poderosas de las promesas es que puedes encadenar múltiples operaciones asincrónicas de manera fácil y legible utilizando el método .then(). Esto se conoce como "encadenamiento de promesas".</p><br>
-                    <p>function operacionAsincronica() {
-                        return new Promise((resolve, reject) => {
-                          // Simulando una operación asincrónica
-                          setTimeout(() => {
-                            resolve(1);
-                          }, 1000);
-                        });
-                      }
-                      
-                      operacionAsincronica()
-                        .then((resultado) => {
-                          console.log(resultado); // 1
-                          return resultado * 2;
-                        })
-                        .then((resultado) => {
-                          console.log(resultado); // 2
-                          return resultado * 3;
-                        })
-                        .then((resultado) => {
-                          console.log(resultado); // 6
-                        });</p><br>
+                    <img src="promesa-3-1.png" alt="">
+                    <img src="promesa-3-2.png" alt="">
                     <p>En este ejemplo, cada .then() recibe el resultado de la operación anterior y puede realizar su propia operación antes de pasar el resultado al siguiente .then().</p><br>
                     <p><b>Promise.all():</b></p><br>
                     <p>El método Promise.all() es útil cuando necesitas realizar múltiples operaciones asincrónicas al mismo tiempo y esperar a que todas se completen antes de continuar. Devuelve una única promesa que se cumple cuando todas las promesas dadas se han cumplido o se rechaza tan pronto como una de las promesas dadas es rechazada.</p><br>
-                    <p>const promesa1 = Promise.resolve(1);
-                        const promesa2 = new Promise((resolve) => setTimeout(() => resolve(2), 1000));
-                        const promesa3 = Promise.reject("Error");
-                        
-                        Promise.all([promesa1, promesa2])
-                          .then((resultados) => {
-                            console.log(resultados); // [1, 2]
-                          })
-                          .catch((error) => {
-                            console.error(error); // No se ejecutará en este caso
-                          });
-                        
-                        Promise.all([promesa1, promesa3])
-                          .then((resultados) => {
-                            console.log(resultados); // No se ejecutará en este caso
-                          })
-                          .catch((error) => {
-                            console.error(error); // Error
-                          });</p><br>
+                    <img src="promesa-4-1.png" alt="">
+                    <img src="promesa-4-1.png" alt="">
                     <p><b>Promise.race():</b></p><br>
                     <p>El método Promise.race() es similar a Promise.all(), pero en lugar de esperar a que todas las promesas se completen, devuelve una promesa que se resuelve o se rechaza tan pronto como una de las promesas dadas se resuelve o se rechaza.</p><br>
-                    <p>const promesa1 = new Promise((resolve) => setTimeout(() => resolve(1), 2000));
-                        const promesa2 = new Promise((resolve) => setTimeout(() => resolve(2), 1000));
-                        
-                        Promise.race([promesa1, promesa2])
-                          .then((resultado) => {
-                            console.log(resultado); // 2 (la promesa2 se resuelve primero)
-                          })
-                          .catch((error) => {
-                            console.error(error); // No se ejecutará en este caso
-                          });</p><br>
+                    <img src="promesa-5.png" alt="">
                     <p>En este ejemplo, aunque promesa1 tarda más tiempo en resolverse, la promesa que se resuelve primero es promesa2, por lo que Promise.race() devuelve el resultado de esa promesa.</p><br>
                     <p>Las promesas en JavaScript son una herramienta poderosa para trabajar con operaciones asincrónicas de manera más efectiva y legible. Con funciones como el encadenamiento de promesas, Promise.all(), Promise.race() y async/await, puedes escribir código asincrónico de manera más clara y concisa.</p><br>
                 </li><br>

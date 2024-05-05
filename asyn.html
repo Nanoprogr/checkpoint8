@@ -104,42 +104,16 @@
                       }</b></p><br>
                     <p>Con await, la función se detiene y espera a que una promesa se resuelva antes de continuar con el siguiente bloque de código. Esto hace que el código asincrónico se vea más como código síncrono, lo que lo hace mucho más fácil de entender y mantener.</p><br>
                     <p>Una gran ventaja de usar async y await es que facilitan el manejo de errores en código asincrónico. Puedes usar try-catch para capturar y manejar los errores de manera más clara y concisa.</p><br>
-                    <p><b>async function obtenerDatos() {
-                        try {
-                          const resultado = await fetch('https://api.example.com/data');
-                          const datos = await resultado.json();
-                          console.log(datos);
-                        } catch (error) {
-                          console.error('Error al obtener los datos:', error);
-                        }
-                      }</b></p><br>
+                    <img src="async1.png" alt=""><br>
                     <p>En este ejemplo, try-catch envuelve el código asincrónico, lo que permite capturar cualquier error que ocurra durante la ejecución de las promesas.</p><br>
                     <p>Puedes usar async y await con funciones existentes que devuelven promesas. Esto te permite integrar fácilmente el nuevo código asincrónico con el código existente.</p><br>
-                    <p>function obtenerResultado() {
-                        return new Promise((resolve) => {
-                          setTimeout(() => resolve('¡Resultado obtenido!'), 2000);
-                        });
-                      }
-                      
-                      async function mostrarResultado() {
-                        const resultado = await obtenerResultado();
-                        console.log(resultado);
-                      }
-                      
-                      mostrarResultado();</p><br>
+                    <img src="async2.png" alt=""><br>
                     <p>la función mostrarResultado() utiliza await para esperar a que se resuelva la promesa devuelta por obtenerResultado() antes de mostrar el resultado.</p><br>
                     <p>Aunque async y await hacen que el código asincrónico sea más legible, es importante tener en cuenta que puede haber un ligero impacto en el rendimiento debido a la naturaleza de la espera de promesas. Sin embargo, en la mayoría de los casos, la diferencia de rendimiento es insignificante y la claridad del código compensa con creces cualquier pequeña pérdida de rendimiento.</p><br>
                     <p>Las funciones async y await son compatibles con la mayoría de los navegadores modernos, pero es posible que encuentres problemas de compatibilidad si necesitas admitir versiones más antiguas de los navegadores. En esos casos, puedes utilizar herramientas como Babel para transpilar tu código a una forma compatible con versiones anteriores de JavaScript.</p><br>
                     <p>async y await son herramientas poderosas que hacen que el código asincrónico en JavaScript sea más fácil de leer, escribir y mantener. Su integración con el manejo de errores, compatibilidad con funciones existentes y rendimiento general los convierten en una opción sólida para el desarrollo de aplicaciones modernas en la web.</p><br>
                     <p>Aunque las funciones async y await facilitan la escritura de código asincrónico, es importante recordar que, por defecto, el código que espera una promesa con await se ejecuta de manera secuencial. Sin embargo, puedes aprovechar el paralelismo utilizando múltiples await en diferentes promesas si no tienen dependencias entre sí.</p><br>
-                    <p><b>async function obtenerDatosConcurrentemente() {
-                        const [datos1, datos2] = await Promise.all([
-                          obtenerDatosDeAPI1(),
-                          obtenerDatosDeAPI2()
-                        ]);
-                        console.log('Datos 1:', datos1);
-                        console.log('Datos 2:', datos2);
-                      }</b></p><br>
+                    <img src="async3.png" alt=""><br>
                       <p>obtenerDatosDeAPI1() y obtenerDatosDeAPI2() se ejecutan en paralelo, lo que puede mejorar el rendimiento cuando las operaciones son independientes entre sí.</p><br>
                     <p>Una limitación de las funciones async y await es que no proporcionan una forma nativa de cancelar una promesa en medio de su ejecución. Sin embargo, existen bibliotecas de terceros, como axios, que ofrecen funcionalidades de cancelación de promesas.</p><br>
                     <p>Al depurar código que utiliza async y await, es importante tener en cuenta que los errores dentro de las promesas se propagarán como excepciones y pueden ser manejados utilizando bloques try-catch. Sin embargo, ten en cuenta que los errores en las promesas rechazadas pueden no ser inmediatamente evidentes si no se capturan adecuadamente.</p><br>
